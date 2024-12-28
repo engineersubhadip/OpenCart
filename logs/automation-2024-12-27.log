@@ -1,0 +1,94 @@
+21:24:48.992 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\Selenium Java Automation\OpenCart\grouping.xml
+
+21:24:53.247 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:24:53.273 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+21:24:53.341 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+21:24:53.928 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+21:24:53.953 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Registration Page
+21:24:53.954 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+21:24:55.922 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+21:24:56.505 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+21:24:56.505 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+21:24:56.565 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
+21:24:56.566 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
+21:24:59.438 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:24:59.449 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+21:24:59.531 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+21:24:59.982 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+21:24:59.993 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Registration Page
+21:24:59.993 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+21:25:02.203 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+21:25:02.203 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+21:25:02.251 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+21:25:02.251 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+21:25:05.197 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+21:25:05.209 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+21:25:05.274 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+21:25:05.540 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+21:25:05.552 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+21:25:05.552 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+21:25:06.228 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+21:25:06.245 [main] INFO  testCases.TC003_ValidUserLoginTest - Starting validation
+21:25:06.293 [main] INFO  testCases.TC003_ValidUserLoginTest - Validation successfull
+21:25:06.293 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Finished TC003_ValidUserLoginTest execution ****
+21:27:31.843 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\Selenium Java Automation\OpenCart\grouping.xml
+
+21:27:35.335 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:27:35.365 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+21:27:35.436 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+21:27:35.846 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+21:27:35.856 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Registration Page
+21:27:35.856 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+21:27:37.848 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+21:27:38.483 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+21:27:38.483 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+21:27:38.540 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
+21:27:38.543 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
+21:27:41.401 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:27:41.411 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+21:27:41.482 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+21:27:41.842 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+21:27:41.856 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Registration Page
+21:27:41.856 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+21:27:44.039 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+21:27:44.039 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+21:27:44.123 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+21:27:44.123 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+21:27:46.976 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+21:27:46.989 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+21:27:47.071 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+21:27:47.334 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+21:27:47.346 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+21:27:47.346 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+21:27:47.935 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+21:27:58.377 [main] ERROR testCases.TC003_ValidUserLoginTest - Error Message -> Expected condition failed: waiting for title to contain "My Account". Current title: "Account Login" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\subha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52739}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52739/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 223a6af4fd4d6043d191220065a5dbc1
+21:55:02.786 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\Selenium Java Automation\OpenCart\grouping.xml
+
+21:55:06.339 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:55:06.379 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+21:55:06.493 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+21:55:06.854 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+21:55:06.865 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Registration Page
+21:55:06.865 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+21:55:08.865 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+21:55:09.507 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+21:55:09.507 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+21:55:09.575 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
+21:55:09.578 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
+21:55:13.128 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:55:13.139 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+21:55:13.203 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+21:55:13.659 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+21:55:13.677 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Registration Page
+21:55:13.678 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+21:55:16.187 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+21:55:16.187 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+21:55:16.235 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
