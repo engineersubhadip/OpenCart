@@ -8,7 +8,7 @@ public class DataProviders {
 	
 	@DataProvider(name="loginDataProvider")
 	public String[][] getData() throws IOException {
-		String filePath = "K:\\Selenium Java Automation\\OpenCart\\testData\\OpenCart LoginData.xlsx";
+		String filePath = System.getProperty("user.dir")+"\\testData\\OpenCart LoginData.xlsx";
 		String sheetName = "Sheet1";
 		
 		ExcelUtils excel = new ExcelUtils(filePath);

@@ -9,7 +9,7 @@ import testBase.BaseTest;
 
 public class TC001_AccountRegistrationTest extends BaseTest {
 
-	@Test(groups= {"regression","master"})
+	@Test(groups = { "regression", "master" })
 	public void verfiy_account_registration() throws InterruptedException { // This test-case is referring to 2 page
 																			// object classes.
 
@@ -63,13 +63,13 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 //		Validation Part :-
 
 			logger.info("About to start validation message");
-			
+
 			String confirmMessage = regPage.validateConfirmationMessage();
-			
+
 			if (confirmMessage.equals("Your Account Has Been Created!")) {
 				logger.info("Validation Passed");
 				Assert.assertTrue(true);
-			}else {
+			} else {
 				logger.info("validation Failed");
 				logger.error("Error Logs");
 				logger.debug("Debug Logs");

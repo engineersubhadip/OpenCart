@@ -1,50 +1,10 @@
-16:48:49.567 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
-16:48:50.168 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
-16:48:50.189 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Registration Page
-16:48:50.193 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
-16:48:52.901 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
-16:48:53.767 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
-16:48:53.767 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
-16:48:53.908 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
-16:48:53.923 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
-16:48:57.845 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-16:48:57.854 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-16:48:57.963 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-16:48:58.281 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-16:48:58.308 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-16:48:58.308 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-16:48:59.312 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-16:48:59.335 [main] INFO  testCases.TC003_ValidUserLoginTest - Starting validation
-16:48:59.452 [main] INFO  testCases.TC003_ValidUserLoginTest - Validation successfull
-16:48:59.452 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Finished TC003_ValidUserLoginTest execution ****
-16:49:03.802 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
-16:49:03.812 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
-16:49:03.915 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
-16:49:04.363 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
-16:49:04.373 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Registration Page
-16:49:04.376 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
-16:49:07.090 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
-16:49:07.945 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
-16:49:07.948 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
-16:49:08.054 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
-16:49:08.054 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
-16:49:11.822 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
-16:49:11.834 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
-16:49:11.959 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
-16:49:12.491 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
-16:49:12.504 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Registration Page
-16:49:12.504 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
-16:49:15.440 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
-16:49:15.440 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
-16:49:15.551 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
-16:49:15.551 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
-16:49:19.213 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-16:49:19.221 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-16:49:19.317 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-16:49:19.621 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-16:49:19.634 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-16:49:19.634 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-16:49:20.714 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-16:49:20.741 [main] INFO  testCases.TC003_ValidUserLoginTest - Starting validation
-16:49:20.851 [main] INFO  testCases.TC003_ValidUserLoginTest - Validation successfull
-16:49:20.851 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Finished TC003_ValidUserLoginTest execution ****
+19:01:14.582 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
+19:01:14.648 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
+19:01:14.874 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
+19:01:14.897 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
+19:01:14.897 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
+19:01:15.495 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
+19:01:15.495 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
+19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid and we are not logged in. Test case Pass 
+19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
+19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****

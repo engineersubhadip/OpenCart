@@ -55,7 +55,7 @@ public class BaseTest {
 
 		properties = new Properties();
 		FileInputStream file = new FileInputStream(
-				"K:\\Selenium Java Automation\\OpenCart\\src\\test\\resources\\config.properties");
+				System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
 
 		properties.load(file);
 

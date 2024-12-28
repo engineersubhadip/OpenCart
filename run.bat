@@ -1,2 +1,2 @@
-cd K:\Selenium Java Automation\OpenCart
+cd K:\OpenCart\OpenCart
 mvn clean test
