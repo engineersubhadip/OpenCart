@@ -1,10 +1,16 @@
-19:01:14.582 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-19:01:14.648 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-19:01:14.874 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-19:01:14.897 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-19:01:14.897 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-19:01:15.495 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-19:01:15.495 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid and we are not logged in. Test case Pass 
-19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
-19:01:25.968 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
+22:14:56.247 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\master.xml
+
+22:15:00.685 [main] INFO  testCases.TC005_SearchUserProduct - **** Starting TC005_SearchUserProduct Execution ****
+22:15:00.729 [main] INFO  testCases.TC005_SearchUserProduct - Inside the Home Page
+22:15:01.111 [main] INFO  testCases.TC005_SearchUserProduct - **** Validation Begins ****
+22:15:01.422 [main] INFO  testCases.TC005_SearchUserProduct - Validation successfull !
+22:15:01.424 [main] INFO  testCases.TC005_SearchUserProduct - **** Finished TC005_SearchUserProduct Execution ****
+22:16:28.133 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\master.xml
+
+22:16:31.470 [main] INFO  testCases.TC005_SearchUserProduct - **** Starting TC005_SearchUserProduct Execution ****
+22:16:31.503 [main] INFO  testCases.TC005_SearchUserProduct - Inside the Home Page
+22:16:31.943 [main] INFO  testCases.TC005_SearchUserProduct - **** Validation Begins ****
+22:16:32.277 [main] INFO  testCases.TC005_SearchUserProduct - Validation successfull !
+22:16:32.279 [main] INFO  testCases.TC005_SearchUserProduct - **** Finished TC005_SearchUserProduct Execution ****

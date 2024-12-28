@@ -8,14 +8,13 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="operatingSystem" value="windows"/>
     <classes>
-      <class name="testCases.TC004_LoginDataDrivenTest">
+      <class name="testCases.TC005_SearchUserProduct">
         <methods>
-          <include name="navigateBack"/>
-          <include name="validate_login" invocation-numbers="0 1 2"/>
+          <include name="validate_SearchUserProduct"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases.TC004_LoginDataDrivenTest -->
+      </class> <!-- testCases.TC005_SearchUserProduct -->
     </classes>
   </test> <!-- MasterTest(failed) -->
 </suite> <!-- Failed suite [MasterSuite] -->

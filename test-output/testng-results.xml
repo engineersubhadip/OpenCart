@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="3" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-28T19:00:40 IST" name="MasterSuite" finished-at="2024-12-28T19:01:26 IST" duration-ms="45447">
+  <suite started-at="2024-12-28T22:16:28 IST" name="MasterSuite" finished-at="2024-12-28T22:16:32 IST" duration-ms="4344">
     <groups>
+      <group name="sanity">
+        <method signature="TC005_SearchUserProduct.validate_SearchUserProduct()[pri:0, instance:testCases.TC005_SearchUserProduct@312ab28e]" name="validate_SearchUserProduct" class="testCases.TC005_SearchUserProduct"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-12-28T19:00:40 IST" name="MasterTest" finished-at="2024-12-28T19:01:26 IST" duration-ms="45447">
-      <class name="testCases.TC004_LoginDataDrivenTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:40 IST" name="setUp" finished-at="2024-12-28T19:00:43 IST" duration-ms="3039" status="PASS">
+    <test started-at="2024-12-28T22:16:28 IST" name="MasterTest" finished-at="2024-12-28T22:16:32 IST" duration-ms="4344">
+      <class name="testCases.TC005_SearchUserProduct">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC005_SearchUserProduct@312ab28e]" started-at="2024-12-28T22:16:28 IST" name="setUp" finished-at="2024-12-28T22:16:31 IST" duration-ms="3157" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,281 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:44 IST" name="navigateBack" finished-at="2024-12-28T19:00:44 IST" duration-ms="173" status="PASS">
+        <test-method signature="validate_SearchUserProduct()[pri:0, instance:testCases.TC005_SearchUserProduct@312ab28e]" started-at="2024-12-28T22:16:31 IST" name="validate_SearchUserProduct" finished-at="2024-12-28T22:16:32 IST" duration-ms="818" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:44 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:00:56 IST" duration-ms="11523" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[pavanoltraining@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Valid]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at testCases.TC004_LoginDataDrivenTest.validate_login(TC004_LoginDataDrivenTest.java:62)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:56 IST" name="navigateBack" finished-at="2024-12-28T19:00:56 IST" duration-ms="218" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:56 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:00:58 IST" duration-ms="1636" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[lakshmi@yahoo.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Laxmi]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at testCases.TC004_LoginDataDrivenTest.validate_login(TC004_LoginDataDrivenTest.java:78)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:58 IST" name="navigateBack" finished-at="2024-12-28T19:00:58 IST" duration-ms="178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:00:58 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:01:00 IST" duration-ms="1623" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[laksh@yahoo.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Lakshmi]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at testCases.TC004_LoginDataDrivenTest.validate_login(TC004_LoginDataDrivenTest.java:78)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:00 IST" name="navigateBack" finished-at="2024-12-28T19:01:00 IST" duration-ms="215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:00 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:01:12 IST" duration-ms="11428" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[laks@yahoo.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[xyz]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:12 IST" name="navigateBack" finished-at="2024-12-28T19:01:12 IST" duration-ms="355" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:12 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:01:14 IST" duration-ms="1712" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[abc123@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="navigateBack()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:14 IST" name="navigateBack" finished-at="2024-12-28T19:01:14 IST" duration-ms="237" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBack -->
-        <test-method signature="validate_login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:14 IST" name="validate_login" data-provider="loginDataProvider" finished-at="2024-12-28T19:01:25 IST" duration-ms="11399" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test324]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_LoginDataDrivenTest@4351c8c3]" started-at="2024-12-28T19:01:25 IST" name="tearDown" finished-at="2024-12-28T19:01:26 IST" duration-ms="204" status="PASS">
+        </test-method> <!-- validate_SearchUserProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC005_SearchUserProduct@312ab28e]" started-at="2024-12-28T22:16:32 IST" name="tearDown" finished-at="2024-12-28T22:16:32 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC004_LoginDataDrivenTest -->
+      </class> <!-- testCases.TC005_SearchUserProduct -->
     </test> <!-- MasterTest -->
   </suite> <!-- MasterSuite -->
 </testng-results>
