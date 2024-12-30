@@ -19,6 +19,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
@@ -68,7 +69,13 @@ public class BaseTest {
 	public void tearDown() {
 		driver.quit();
 	}
-
+	
+	@BeforeMethod(groups = { "sanity", "regression", "master" })
+	public void reNavigate () {
+		driver.navigate().to(properties.getProperty("browserURL"));
+	}
+	
+	
 	public static String captureScreenshot() throws IOException {
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

@@ -3,9 +3,9 @@
 
 <suite name="MasterSuite">
 
-	<listeners>
+<!--	<listeners>
 		<listener class-name="utilities.ExtentReportManager"></listener>
-	</listeners>
+	</listeners>-->
 	
   <test name="MasterTest">
   
@@ -15,9 +15,9 @@
     <classes>
 		<!--<class name="testCases.TC001_AccountRegistrationTest"/>-->
       	<!--<class name="testCases.TC002_AccountRegistrationDiffPasswordTest"/>-->
-      	<!--<class name="testCases.TC003_ValidUserLoginTest"/>-->
+      	<class name="testCases.TC003_ValidUserLoginTest"/>
       	<!--<class name="testCases.TC004_LoginDataDrivenTest"/>-->
-      	<class name="testCases.TC005_SearchUserProduct"/>
+      	<!--<class name="testCases.TC005_SearchUserProduct"/>-->
       	
     </classes>
     
