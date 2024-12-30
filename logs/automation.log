@@ -1,55 +1,9 @@
-11:03:20.889 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  K:\OpenCart\OpenCart\master.xml
-
-11:03:24.157 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-11:03:24.188 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-11:03:24.255 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-11:03:24.508 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-11:03:24.526 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-11:03:24.526 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-11:03:25.116 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-11:03:35.588 [main] ERROR testCases.TC003_ValidUserLoginTest - Error Message -> Expected condition failed: waiting for title to contain "My Account". Current title: "Account Login" (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\subha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 657091604ad35be3b4a959c972b18bad
-11:03:35.789 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-11:03:35.803 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-11:03:35.868 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-11:03:36.098 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-11:03:36.113 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-11:03:36.113 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-11:03:36.491 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-11:03:46.537 [main] ERROR testCases.TC003_ValidUserLoginTest - Error Message -> Expected condition failed: waiting for title to contain "My Account". Current title: "Account Login" (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\subha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 657091604ad35be3b4a959c972b18bad
-11:03:46.854 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-11:03:46.863 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-11:03:46.926 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-11:03:47.147 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-11:03:47.160 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-11:03:47.160 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-11:03:47.478 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-11:03:57.543 [main] ERROR testCases.TC003_ValidUserLoginTest - Error Message -> Expected condition failed: waiting for title to contain "My Account". Current title: "Account Login" (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\subha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 657091604ad35be3b4a959c972b18bad
-11:03:57.852 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
-11:03:57.863 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
-11:03:57.918 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
-11:03:58.141 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
-11:03:58.156 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
-11:03:58.156 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
-11:03:58.486 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
-11:04:08.556 [main] ERROR testCases.TC003_ValidUserLoginTest - Error Message -> Expected condition failed: waiting for title to contain "My Account". Current title: "Account Login" (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\subha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50435/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 657091604ad35be3b4a959c972b18bad
+11:43:12.889 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+11:43:12.964 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+11:43:13.347 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+11:43:13.357 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Registration Page
+11:43:13.357 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+11:43:15.531 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+11:43:15.532 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+11:43:15.578 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+11:43:15.578 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****

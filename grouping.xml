@@ -8,9 +8,10 @@
 			<include name="regression" />
 		</run>
 	</groups>
-	
+
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager"/>
+		<listener class-name="utilities.ExtentReportManager" />
+		<listener class-name="utilities.AnnotationTransformer"></listener>
 	</listeners>
 
 	<test name="GroupingTest">

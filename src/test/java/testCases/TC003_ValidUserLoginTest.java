@@ -10,7 +10,7 @@ import testBase.BaseTest;
 
 public class TC003_ValidUserLoginTest extends BaseTest {
 	
-	@Test(groups= {"sanity","master"}, retryAnalyzer = utilities.RetryAnalyzer.class)
+	@Test(groups= {"sanity","master"})
 	public void validate_valid_user_credentials() {
 		
 		logger.info("**** Starting TC003_ValidUserLoginTest execution ****");

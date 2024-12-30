@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MasterSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.AnnotationTransformer"/>
+  </listeners>
   <test thread-count="5" name="MasterTest(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="operatingSystem" value="windows"/>
