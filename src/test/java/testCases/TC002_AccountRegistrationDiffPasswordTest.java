@@ -16,7 +16,13 @@ public class TC002_AccountRegistrationDiffPasswordTest extends BaseTest {
 		
 		try {
 		HomePage homePage = new HomePage(driver);
-		homePage.waitForTitleToLoad("Your Store");
+		boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
+		
+		if (!homePageStatus) {
+			logger.info("Could not load Home Page...");
+			Assert.fail();
+		}
+		
 		logger.info("Inside Home Page.");
 		homePage.clickMyAccount();
 		logger.info("Clicked on My Account");
@@ -24,9 +30,14 @@ public class TC002_AccountRegistrationDiffPasswordTest extends BaseTest {
 		logger.info("Clicked on Register Link");
 
 		AccountRegistrationPage regPage = new AccountRegistrationPage(driver);
-		regPage.waitForTitleToLoad("Register Account");
-		logger.info("Inside Registration Page");
+		boolean registrationPageStatus = regPage.checkPageStatus(properties.getProperty("accountRegisterPageTitle"));
 		
+		if (!registrationPageStatus) {
+			logger.info("Could not load Register Account Page");
+			Assert.fail();
+		}
+		
+		logger.info("Inside Register Account Page");
 		logger.info("Entering customer details....");
 		
 		String firstName = getRandomString();
@@ -53,8 +64,6 @@ public class TC002_AccountRegistrationDiffPasswordTest extends BaseTest {
 		
 		logger.info("Entered all the details");
 		
-//		Validation Part :-
-		
 		logger.info("Starting password mismatch message verfication....");
 		
 		String passwordMismatchMessage = regPage.validateIncorrectPasswordMessage();
@@ -64,7 +73,6 @@ public class TC002_AccountRegistrationDiffPasswordTest extends BaseTest {
 			Assert.assertTrue(true);
 		}else {
 			logger.info("Message verfication failed");
-			logger.error("Error Logs");
 			Assert.assertTrue(false);
 		}
 
