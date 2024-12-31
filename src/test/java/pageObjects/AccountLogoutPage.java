@@ -18,16 +18,8 @@ public class AccountLogoutPage extends BasePage {
 	@FindBy(xpath="//a[normalize-space()='Continue']")
 	WebElement continueButton;
 	
-	public boolean checkLogoutConfirmMessage () {
-		try {
-			waitForElementToAppear(logoutConfirmMsgLoc);
-			return logoutConfirmMessage.isDisplayed();
-		}catch (Exception e) {
-			return false;
-		}
-	}
-	
 	public void clickContinueButton() {
+		waitForElementToAppear(logoutConfirmMsgLoc);
 		this.continueButton.click();
 	}
 }

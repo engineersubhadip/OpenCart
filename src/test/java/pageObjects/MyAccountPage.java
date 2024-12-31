@@ -20,18 +20,6 @@ public class MyAccountPage extends BasePage {
 	@FindBy(xpath="//h2[normalize-space()='My Account']")
 	WebElement headerMessage;
 	
-	
-	public boolean getHeaderMessage() {
-		try {
-			waitForTitleToLoad("My Account");
-			waitForElementToAppear(myAccountHeaderMsgLoc);
-			return headerMessage.isDisplayed();
-		} catch(Exception e) {
-			return false;
-		}
-	}
-	
-	
 	public void clickLogout() {
 		logoutLink.click();
 	}
