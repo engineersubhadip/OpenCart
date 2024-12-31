@@ -18,22 +18,29 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 		try {
 
 			HomePage homePage = new HomePage(driver);
-			homePage.waitForTitleToLoad("Your Store");
-
+			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
+			
+			if (!homePageStatus) {
+				logger.info("Could not load Home Page...");
+				Assert.fail();
+			}
+			
 			logger.info("Inside the Home Page...");
 
 			homePage.clickMyAccount();
 			logger.info("Clicked on My Account");
-			homePage.clickRegister(); // till here we are clicking on the Register link
+			homePage.clickRegister(); 
 			logger.info("Clicked on Register Link");
 
-//		Inside Account Registration Page :
-
 			AccountRegistrationPage regPage = new AccountRegistrationPage(driver);
-
-			regPage.waitForTitleToLoad("Register Account");
-
-			logger.info("Inside Registration Page");
+			boolean registrationPageStatus = regPage.checkPageStatus(properties.getProperty("accountRegisterPageTitle"));
+			
+			if (!registrationPageStatus) {
+				logger.info("Could not load Register Account Page...");
+				Assert.fail();
+			}
+			
+			logger.info("Inside Register Account Page...");
 			logger.info("Entering all the Customer details...");
 
 			String firstName = getRandomString();
@@ -60,23 +67,21 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 			regPage.clickContinue();
 			logger.info("Clicked on Continue button");
 
-//		Validation Part :-
-
 			logger.info("About to start validation message");
 
 			String confirmMessage = regPage.validateConfirmationMessage();
-
+			
 			if (confirmMessage.equals("Your Account Has Been Created!")) {
 				logger.info("Validation Passed");
 				Assert.assertTrue(true);
 			} else {
-				logger.info("validation Failed");
-				logger.error("Error Logs");
-				logger.debug("Debug Logs");
+				logger.info("Validation Failed");
 				Assert.assertTrue(false);
 			}
 
 		} catch (Exception e) {
+			logger.info("Test case execution failed.");
+			logger.error("Reason :- "+e.getMessage());
 			Assert.fail();
 		}
 
