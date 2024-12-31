@@ -20,9 +20,6 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath="//input[@value='Login']")
 	WebElement loginButton;
 	
-	By confirmationMessageLoginLoc = By.xpath("//h2[normalize-space()='My Account']");
-	@FindBy(xpath="//h2[normalize-space()='My Account']")
-	WebElement confirmationMessageLogin;
 	
 	public void enterUserEmail(String email) {
 		emailAddress.sendKeys(email);
