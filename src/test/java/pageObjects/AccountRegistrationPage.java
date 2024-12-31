@@ -78,6 +78,7 @@ public class AccountRegistrationPage extends BasePage{
 	public String validateIncorrectPasswordMessage() {
 		try {
 			waitForElementToAppear(passwordMismatchLoc);
+			Thread.sleep(3000);
 			return passwordMismatch.getText();
 		}catch(Exception e) {
 			return e.getMessage();
@@ -87,6 +88,7 @@ public class AccountRegistrationPage extends BasePage{
 	public String validateConfirmationMessage() {
 		try {
 			waitForElementToAppear(msgConfirmationLoc);
+			Thread.sleep(3000);
 			return msgConfirmation.getText();			
 		}catch(Exception e) {
 			return e.getMessage();
