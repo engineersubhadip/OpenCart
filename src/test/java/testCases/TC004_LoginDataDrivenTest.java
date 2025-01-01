@@ -13,12 +13,6 @@ import utilities.DataProviders;
 
 public class TC004_LoginDataDrivenTest extends BaseTest {
 
-//	@BeforeMethod
-//	public void navigateBack() {
-//		System.out.println("Inside Before Method...");
-//		driver.navigate().to(properties.getProperty("browserURL"));
-//	}
-
 	@Test(dataProvider = "loginDataProvider", dataProviderClass = DataProviders.class)
 	public void validate_login(String email, String password, String expResult) {
 
