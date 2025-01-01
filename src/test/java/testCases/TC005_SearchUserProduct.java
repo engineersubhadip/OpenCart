@@ -45,7 +45,8 @@ public class TC005_SearchUserProduct extends BaseTest {
 			}
 
 			searchPage.clickAddToCart(properties.getProperty("searchProduct"));
-
+			logger.info("Product added to cart.");
+			
 			boolean confirmationStatus = searchPage.checkConfirmMessage();
 
 			if (!confirmationStatus) {
