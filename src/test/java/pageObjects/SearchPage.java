@@ -27,14 +27,14 @@ public class SearchPage extends BasePage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement confirmMessage;
 
-	public boolean checkProductExistStatus() {
+	public boolean checkProductExistStatus(String tarProduct) {
 //		2 Parts of check :-
 //		1. Empty product list
 //		2. All displayed products will be iPhone.
 
 		int invalidProductCount = productList.stream().filter(currEle -> {
 			String productTitle = currEle.getAttribute("title");
-			if (!productTitle.toLowerCase().contains("iphone")) {
+			if (!productTitle.toLowerCase().contains(tarProduct)) {
 				return true;
 			} else {
 				return false;
@@ -48,12 +48,12 @@ public class SearchPage extends BasePage {
 		}
 	}
 
-	public void clickAddToCart() {
+	public void clickAddToCart(String tarProduct) {
 		if (!productList.isEmpty()) {
 			
 			productList.stream().filter(currEle -> {
 				String currProductName = currEle.getAttribute("title").toLowerCase();
-				if (currProductName.equalsIgnoreCase("iphone")) {
+				if (currProductName.equalsIgnoreCase(tarProduct)) {
 					return true;
 				} else {
 					return false;
