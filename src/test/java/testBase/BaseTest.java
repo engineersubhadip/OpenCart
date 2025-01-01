@@ -56,7 +56,7 @@ public class BaseTest {
 
 		properties = new Properties();
 		FileInputStream file = new FileInputStream(
-				System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
+				System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
 
 		properties.load(file);
 
@@ -69,13 +69,13 @@ public class BaseTest {
 	public void tearDown() {
 		driver.quit();
 	}
-	
+
+//	The below @BeforeMethod is dedicated to 1. Data Driven Testing 2. Retry Mechanism :- (Due to intermittent issues if the test case fails, again re-run the test from this Home Page
 	@BeforeMethod(groups = { "sanity", "regression", "master" })
-	public void reNavigate () {
+	public void reNavigate() {
 		driver.navigate().to(properties.getProperty("browserURL"));
 	}
-	
-	
+
 	public static String captureScreenshot() throws IOException {
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -87,9 +87,9 @@ public class BaseTest {
 
 //		2. Set the target File Path
 		String targetFilePath = System.getProperty("user.dir") + "/screenshots/screenshot_" + fileName + ".png";
-		
+
 		FileUtils.copyFile(src, new File(targetFilePath));
-		
+
 		return targetFilePath;
 	}
 
