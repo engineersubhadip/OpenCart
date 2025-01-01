@@ -56,7 +56,6 @@ public class TC005_SearchUserProduct extends BaseTest {
 
 			logger.info("Validation successfull !");
 			Assert.assertTrue(true);
-
 		} catch (Exception e) {
 			logger.error("Test case execution failed " + e.getMessage());
 			Assert.fail();
