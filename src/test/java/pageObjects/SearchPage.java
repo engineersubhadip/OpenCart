@@ -27,6 +27,8 @@ public class SearchPage extends BasePage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement confirmMessage;
 
+	WebElement targetProduct;
+
 	public boolean checkProductExistStatus(String tarProduct) {
 //		2 Parts of check :-
 //		1. Empty product list
@@ -48,23 +50,28 @@ public class SearchPage extends BasePage {
 		}
 	}
 
-	public void clickAddToCart(String tarProduct) {
-		
+	public void clickAddToCart(String tarProduct) throws InterruptedException {
+//		Thread.sleep(3000);
 		if (!productList.isEmpty()) {
-			
-			productList.stream().filter(currEle -> {
+
+			targetProduct = productList.stream().filter(currEle -> {
 				String currProductName = currEle.getAttribute("title").toLowerCase();
 				if (currProductName.equalsIgnoreCase(tarProduct)) {
 					return true;
 				} else {
 					return false;
 				}
-			}).limit(1).toList().get(0).click();
-			
+			}).limit(1).toList().get(0);
+
+			targetProduct
+					.findElement(By.xpath(
+							"./ancestor::div[@class='product-thumb'] //button//span[normalize-space()='Add to Cart']"))
+					.click();
 		}
 	}
 
-	public boolean checkConfirmMessage() {
+	public boolean checkConfirmMessage() throws InterruptedException {
+//		Thread.sleep(2000);
 		try {
 			waitForElementToAppear(confirmMessageLoc);
 			return confirmMessage.isDisplayed();
