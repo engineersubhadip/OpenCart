@@ -23,9 +23,6 @@ public class SearchPage extends BasePage {
 	@FindBy(xpath = "//span[normalize-space()='Add to Cart']")
 	WebElement addToCart;
 
-	@FindBy(xpath = "//spasudbhaksdvkjasdhpace()='Add to Cart']") // invalid xpath
-	WebElement beautify;
-
 	By confirmMessageLoc = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement confirmMessage;
@@ -53,7 +50,16 @@ public class SearchPage extends BasePage {
 
 	public void clickAddToCart() {
 		if (!productList.isEmpty()) {
-			addToCart.click();
+			
+			productList.stream().filter(currEle -> {
+				String currProductName = currEle.getAttribute("title").toLowerCase();
+				if (currProductName.equalsIgnoreCase("iphone")) {
+					return true;
+				} else {
+					return false;
+				}
+			}).limit(1).toList().get(0).click();
+			
 		}
 	}
 
