@@ -49,6 +49,7 @@ public class SearchPage extends BasePage {
 	}
 
 	public void clickAddToCart(String tarProduct) {
+		
 		if (!productList.isEmpty()) {
 			
 			productList.stream().filter(currEle -> {
