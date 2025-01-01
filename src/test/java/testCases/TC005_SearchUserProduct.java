@@ -9,30 +9,42 @@ import testBase.BaseTest;
 
 public class TC005_SearchUserProduct extends BaseTest {
 
-	@Test(groups= {"sanity"})
+	@Test(groups = { "sanity" })
 	public void validate_SearchUserProduct() {
 		logger.info("**** Starting TC005_SearchUserProduct Execution ****");
 
 		try {
 			HomePage homePage = new HomePage(driver);
-			homePage.waitForTitleToLoad(properties.getProperty("homePageTitle"));
+			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
+
+			if (!homePageStatus) {
+				logger.info("Could not load Home Page.");
+				Assert.fail();
+			}
+
 			logger.info("Inside the Home Page");
 			homePage.enterProductName(properties.getProperty("searchProduct"));
 			homePage.clickSearchButton();
 
 			SearchPage searchPage = new SearchPage(driver);
-			searchPage.waitForTitleToLoad("Search - " + properties.getProperty("searchProduct"));
+			boolean searchPageStatus = searchPage
+					.checkPageStatus("Search - " + properties.getProperty("searchProduct"));
+			
+			if (!searchPageStatus) {
+				logger.info("Could not load Product Search Page");
+				Assert.fail();
+			}
 
 			logger.info("**** Validation Begins ****");
 
-			boolean status = searchPage.checkProductExistStatus();
+			boolean status = searchPage.checkProductExistStatus(properties.getProperty("searchProduct"));
 
 			if (!status) {
 				logger.info("Product does not exists.");
 				Assert.assertTrue(false);
 			}
 
-			searchPage.clickAddToCart();
+			searchPage.clickAddToCart(properties.getProperty("searchProduct"));
 
 			boolean confirmationStatus = searchPage.checkConfirmMessage();
 
