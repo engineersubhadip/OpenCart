@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager; //Log4j
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger; //Log4j
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,7 +19,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
@@ -27,17 +26,18 @@ public class BaseTest {
 	public static WebDriver driver;
 	public Logger logger;
 	public Properties properties;
-
+	public ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
+	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
+	
 	@BeforeClass(groups = { "sanity", "regression", "master" })
 	@Parameters({ "browser", "operatingSystem" })
 
 	public void setUp(String browser, String operatingSystem) throws IOException {
 
-		logger = LogManager.getLogger(this.getClass()); // this.getClass() -> will dynamically capture the current
-
+		logger = LogManager.getLogger(this.getClass()); /// this.getClass() -> will dynamically capture the current
 		// class(test case) we are running.
 		// line 21 will load the log4j2.xml file
-
+		
 		if (browser.toLowerCase().contains("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.toLowerCase().contains("edge")) {
@@ -48,33 +48,43 @@ public class BaseTest {
 			return;
 		}
 
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		tLocalDriver.set(driver);
+
+		tLocalDriver.get().manage().deleteAllCookies();
+		tLocalDriver.get().manage().window().maximize();
+		tLocalDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //		Loading Config.properties file :-
+		
 
 		properties = new Properties();
 		FileInputStream file = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
 
 		properties.load(file);
-
-		String browserURL = properties.getProperty("browserURL"); // reading value from properties file
-
-		driver.get(browserURL);
+		tLocalProperties.set(properties);
+		
+		String browserURL = tLocalProperties.get().getProperty("browserURL"); // reading value from properties file
+//		String browserURL = "https://tutorialsninja.com/demo/";
+		
+		tLocalDriver.get().get(browserURL);
 	}
 
 	@AfterClass(groups = { "sanity", "regression", "master" })
 	public void tearDown() {
-		driver.quit();
+//		ThreadSafeDriver.getDriver().quit(); // This will make sure that we close the browser being currently linked to the current thread.
+//		ThreadSafeDriver.removeDriver();
+		tLocalDriver.get().quit();
+		tLocalDriver.remove();
+//		tLocalLogger.remove();
+		tLocalProperties.remove();
 	}
 
 //	The below @BeforeMethod is dedicated to 1. Data Driven Testing 2. Retry Mechanism :- (Due to intermittent issues if the test case fails, again re-run the test from this Home Page
-	@BeforeMethod(groups = { "sanity", "regression", "master" })
-	public void reNavigate() {
-		driver.navigate().to(properties.getProperty("browserURL"));
-	}
+//	@BeforeMethod(groups = { "sanity", "regression", "master" })
+//	public void reNavigate() {
+//		driver.navigate().to(properties.getProperty("browserURL"));
+//	}
 
 	public static String captureScreenshot() throws IOException {
 
