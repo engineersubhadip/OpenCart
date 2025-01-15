@@ -1,0 +1,95 @@
+00:06:19.657 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+00:06:19.661 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+00:06:20.357 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+00:06:30.777 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Invalid Credentials.
+00:06:34.644 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+00:06:34.658 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+00:06:34.720 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+00:06:35.207 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+00:06:35.221 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Register Account Page
+00:06:35.221 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+00:06:37.472 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+00:06:37.472 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+00:06:40.624 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+00:06:40.624 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+00:08:04.279 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\crossbrowsertesting.xml
+
+00:08:08.732 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+00:08:08.759 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+00:08:08.827 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+00:08:09.452 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+00:08:09.459 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+00:08:09.460 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+00:08:09.858 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+00:08:19.872 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Invalid Credentials.
+00:08:24.729 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+00:08:24.741 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+00:08:24.808 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+00:08:25.575 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+00:08:25.588 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Register Account Page
+00:08:25.588 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+00:08:28.406 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+00:08:28.406 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+00:08:31.489 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+00:08:31.489 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+00:11:31.243 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\crossbrowsertesting.xml
+
+00:11:35.565 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+00:11:35.594 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+00:11:35.659 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+00:11:35.963 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+00:11:35.972 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+00:11:35.973 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+00:11:36.609 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+00:11:46.611 [TestNG-tests-1] INFO  testCases.TC003_ValidUserLoginTest - Invalid Credentials.
+00:11:50.159 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+00:11:50.172 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+00:11:50.235 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+00:11:50.765 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+00:11:50.777 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Register Account Page
+00:11:50.777 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+00:11:52.946 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+00:11:52.946 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+00:11:56.089 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+00:11:56.089 [TestNG-tests-1] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+00:13:33.202 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\crossbrowsertesting.xml
+
+00:13:37.649 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+00:13:37.683 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+00:13:37.761 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+00:13:38.830 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+00:13:38.843 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Inside Register Account Page...
+00:13:38.843 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+00:13:39.747 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+00:13:39.762 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+00:13:39.836 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+00:13:40.327 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+00:13:40.336 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+00:13:40.337 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+00:13:40.732 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+00:13:41.115 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+00:13:41.804 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+00:13:41.804 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+00:13:44.887 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed
+00:13:44.893 [TestNG-tests-1] INFO  testCases.TC001_AccountRegistrationTest - **** Finished TC001_AccountRegistrationTest execution ****
+00:13:51.632 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Invalid Credentials.
+00:13:55.462 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+00:13:55.474 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+00:13:55.542 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+00:13:56.018 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+00:13:56.027 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Register Account Page
+00:13:56.028 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+00:13:58.417 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+00:13:58.417 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+00:14:01.511 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication successfull
+00:14:01.511 [TestNG-tests-2] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Finished TC002_AccountRegistrationDiffPasswordTest execution ****
+00:17:42.979 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  K:\OpenCart\OpenCart\crossbrowsertesting.xml
+
+00:17:47.290 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+00:17:47.319 [TestNG-tests-2] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+00:17:47.384 [TestNG-tests-1] INFO  testCases.TC005_SearchUserProduct - **** Starting TC005_SearchUserProduct Execution ****
+00:17:47.397 [TestNG-tests-1] INFO  testCases.TC005_SearchUserProduct - Inside the Home Page

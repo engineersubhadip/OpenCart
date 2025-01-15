@@ -3,20 +3,19 @@
 <suite name="Failed suite [MasterSuite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
-    <listener class-name="utilities.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="MasterTest(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="operatingSystem" value="windows"/>
     <classes>
-      <class name="testCases.TC003_ValidUserLoginTest">
+      <class name="testCases.TC004_LoginDataDrivenTest">
         <methods>
+          <include name="validate_login" invocation-numbers="0 1 2"/>
           <include name="reNavigate"/>
-          <include name="validate_valid_user_credentials"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases.TC003_ValidUserLoginTest -->
+      </class> <!-- testCases.TC004_LoginDataDrivenTest -->
     </classes>
   </test> <!-- MasterTest(failed) -->
 </suite> <!-- Failed suite [MasterSuite] -->

@@ -1,6 +1,7 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +20,6 @@ public class LoginPage extends BasePage {
 	
 	@FindBy(xpath="//input[@value='Login']")
 	WebElement loginButton;
-	
 	
 	public void enterUserEmail(String email) {
 		emailAddress.sendKeys(email);

@@ -14,8 +14,8 @@ public class TC005_SearchUserProduct extends BaseTest {
 		logger.info("**** Starting TC005_SearchUserProduct Execution ****");
 
 		try {
-			HomePage homePage = new HomePage(driver);
-			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
+			HomePage homePage = new HomePage(tLocalDriver.get());
+			boolean homePageStatus = homePage.checkPageStatus(tLocalProperties.get().getProperty("homePageTitle"));
 
 			if (!homePageStatus) {
 				logger.info("Could not load Home Page.");
@@ -23,10 +23,10 @@ public class TC005_SearchUserProduct extends BaseTest {
 			}
 
 			logger.info("Inside the Home Page");
-			homePage.enterProductName(properties.getProperty("searchProduct"));
+			homePage.enterProductName(tLocalProperties.get().getProperty("searchProduct"));
 			homePage.clickSearchButton();
 
-			SearchPage searchPage = new SearchPage(driver);
+			SearchPage searchPage = new SearchPage(tLocalDriver.get());
 			boolean searchPageStatus = searchPage
 					.checkPageStatus("Search - " + properties.getProperty("searchProduct"));
 			
@@ -37,14 +37,14 @@ public class TC005_SearchUserProduct extends BaseTest {
 
 			logger.info("**** Validation Begins ****");
 
-			boolean status = searchPage.checkProductExistStatus(properties.getProperty("searchProduct"));
+			boolean status = searchPage.checkProductExistStatus(tLocalProperties.get().getProperty("searchProduct"));
 
 			if (!status) {
 				logger.info("Product does not exists.");
 				Assert.assertTrue(false);
 			}
 
-			searchPage.clickAddToCart(properties.getProperty("searchProduct"));
+			searchPage.clickAddToCart(tLocalProperties.get().getProperty("searchProduct"));
 			logger.info("Product added to cart.");
 			
 			boolean confirmationStatus = searchPage.checkConfirmMessage();

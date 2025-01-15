@@ -72,11 +72,8 @@ public class BaseTest {
 
 	@AfterClass(groups = { "sanity", "regression", "master" })
 	public void tearDown() {
-//		ThreadSafeDriver.getDriver().quit(); // This will make sure that we close the browser being currently linked to the current thread.
-//		ThreadSafeDriver.removeDriver();
 		tLocalDriver.get().quit();
 		tLocalDriver.remove();
-//		tLocalLogger.remove();
 		tLocalProperties.remove();
 	}
 
