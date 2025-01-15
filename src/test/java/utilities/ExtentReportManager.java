@@ -116,8 +116,8 @@ public class ExtentReportManager implements ITestListener {
 			extent.setSystemInfo("Browser", browserName.toString());
 			browserUpdate = true;
 		}
-		lock.unlock();
 		extent.flush();
+		lock.unlock();
 	}
 	
 	public void removeTest () {
