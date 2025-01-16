@@ -1,40 +1,113 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>OpenCart</groupId>
-  <artifactId>OpenCart</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-    <build>
-    <!-- To define the plugin version in your parent POM -->
-    <pluginManagement>
-    
-      <plugins>
-      
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.13.0</version>
-        </plugin>
-        
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.5.2</version>
-          <configuration>
-          	<suiteXmlFiles>
-          		<suiteXmlFile>master.xml</suiteXmlFile>
-          		<suiteXmlFile>grouping.xml</suiteXmlFile>
-          	</suiteXmlFiles>
-          </configuration>
-        </plugin>
-   
-    </plugins>
-    
-    </pluginManagement>
-    
-  </build>
-  
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>OpenCart</groupId>
+	<artifactId>OpenCart</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<profiles>
+
+		<profile>
+			<id>Master</id>
+			<build>
+				<!-- To define the plugin version in your parent POM -->
+				<pluginManagement>
+
+					<plugins>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<version>3.13.0</version>
+						</plugin>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>master.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+
+					</plugins>
+
+				</pluginManagement>
+
+			</build>
+		</profile>
+
+		<profile>
+			<id>Grouping</id>
+			<build>
+				<!-- To define the plugin version in your parent POM -->
+				<pluginManagement>
+
+					<plugins>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<version>3.13.0</version>
+						</plugin>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>grouping.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+
+					</plugins>
+
+				</pluginManagement>
+
+			</build>
+		</profile>
+
+		<profile>
+			<id>CrossBrowser</id>
+			<build>
+				<!-- To define the plugin version in your parent POM -->
+				<pluginManagement>
+
+					<plugins>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<version>3.13.0</version>
+						</plugin>
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>crossbrowsertesting.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+
+					</plugins>
+
+				</pluginManagement>
+
+			</build>
+		</profile>
+
+	</profiles>
+
+
+	<dependencies>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -123,4 +196,4 @@
 
 
 	</dependencies>
-  </project>
+</project>
