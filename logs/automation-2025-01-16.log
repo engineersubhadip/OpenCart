@@ -1,100 +1,98 @@
-14:52:15.387 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-14:52:15.389 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-14:52:16.461 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-14:52:16.462 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-14:52:16.475 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is valid and we are successfully logged in. Test case Pass abc123@gmail.com
-14:52:17.622 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-14:52:18.971 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
-14:52:18.971 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
-14:52:20.030 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-14:52:20.039 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-14:52:20.149 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-14:52:21.271 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-14:52:21.283 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-14:52:21.283 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-14:52:22.571 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-14:52:22.571 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-14:52:33.050 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid and we are not logged in. Test case Pass 
-14:52:33.051 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
-14:52:33.051 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
-15:04:17.864 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  K:\OpenCart\OpenCart\datadriventesting.xml
-
-15:04:26.073 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:04:26.159 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:04:26.356 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:04:26.896 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:04:26.912 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:04:26.912 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:04:28.412 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:04:28.412 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:04:38.450 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is valid but we are not successfully logged in. Test case Failed pavanoltraining@gmail.com
-15:04:39.491 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:04:39.523 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:04:39.716 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:04:40.992 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:04:41.008 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:04:41.010 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:04:42.510 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:04:42.510 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:04:52.553 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is valid but we are not successfully logged in. Test case Failed pavanoltraining@gmail.com
-15:04:52.976 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:04:52.995 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:04:53.253 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:04:54.412 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:04:54.430 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:04:54.430 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:04:55.753 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:04:55.753 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:05.807 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is valid but we are not successfully logged in. Test case Failed pavanoltraining@gmail.com
-15:05:06.719 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:05:06.754 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:05:06.946 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:05:07.854 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:05:07.878 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:05:07.878 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:05:09.038 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:05:09.038 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:09.058 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed lakshmi@yahoo.com
-15:05:10.073 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-15:05:10.967 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:05:10.979 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:05:11.193 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:05:12.167 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:05:12.195 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:05:12.195 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:05:13.492 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:05:13.492 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:13.508 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed lakshmi@yahoo.com
-15:05:14.128 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-15:05:14.598 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:05:14.621 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:05:14.854 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:05:15.898 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:05:15.910 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:05:15.910 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:05:17.261 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:05:17.261 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:17.290 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed lakshmi@yahoo.com
-15:05:18.372 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-15:05:19.541 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:05:19.556 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:05:19.786 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:05:20.660 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:05:20.690 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:05:20.690 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:05:22.186 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:05:22.186 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:22.199 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed laksh@yahoo.com
-15:05:23.297 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-15:05:24.284 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
-15:05:24.304 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
-15:05:24.519 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
-15:05:25.624 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
-15:05:25.640 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
-15:05:25.640 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
-15:05:27.149 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
-15:05:27.149 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
-15:05:27.167 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed laksh@yahoo.com
-15:05:28.202 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
-15:05:29.050 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
+15:05:29.067 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
+15:05:29.286 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
+15:05:30.419 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
+15:05:30.426 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
+15:05:30.435 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
+15:05:31.879 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
+15:05:31.880 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
+15:05:31.894 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid but we are logged in. Test case failed laksh@yahoo.com
+15:05:33.129 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
+15:05:34.054 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
+15:05:34.068 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
+15:05:34.246 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
+15:05:35.720 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
+15:05:35.735 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
+15:05:35.735 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
+15:05:36.851 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
+15:05:36.851 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
+15:05:46.872 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid and we are not logged in. Test case Pass laks@yahoo.com
+15:05:46.872 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
+15:05:46.872 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
+15:05:47.662 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
+15:05:47.691 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
+15:05:47.907 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
+15:05:49.207 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
+15:05:49.221 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
+15:05:49.221 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
+15:05:50.516 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
+15:05:50.516 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
+15:05:50.535 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is valid and we are successfully logged in. Test case Pass abc123@gmail.com
+15:05:51.528 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside Account Logout page
+15:05:52.687 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
+15:05:52.687 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
+15:05:52.983 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Starting TC004_LoginDataDrivenTest execution ****
+15:05:52.995 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Home Page
+15:05:53.212 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked My Account
+15:05:54.402 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked Login Link from Home Page
+15:05:54.430 [main] INFO  testCases.TC004_LoginDataDrivenTest - Inside the Login Page
+15:05:54.430 [main] INFO  testCases.TC004_LoginDataDrivenTest - Entering user credentials
+15:05:55.663 [main] INFO  testCases.TC004_LoginDataDrivenTest - Clicked on Login Button and trying to Login...
+15:05:55.663 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation begins...
+15:06:06.186 [main] INFO  testCases.TC004_LoginDataDrivenTest - This combination is invalid and we are not logged in. Test case Pass 
+15:06:06.186 [main] INFO  testCases.TC004_LoginDataDrivenTest - Validation ends...
+15:06:06.186 [main] INFO  testCases.TC004_LoginDataDrivenTest - **** Finished TC004_LoginDataDrivenTest execution ****
+21:33:15.102 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:33:15.121 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+21:33:15.199 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+21:33:15.835 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+21:33:15.850 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Register Account Page...
+21:33:15.850 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+21:33:17.816 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+21:33:19.091 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+21:33:19.091 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+21:33:22.175 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Failed
+21:33:22.198 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:33:32.231 [main] INFO  testCases.TC001_AccountRegistrationTest - Could not load Home Page...
+21:33:32.231 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:33:42.280 [main] INFO  testCases.TC001_AccountRegistrationTest - Could not load Home Page...
+21:33:46.371 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:33:46.384 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Home Page.
+21:33:46.450 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on My Account
+21:33:48.793 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Clicked on Register Link
+21:33:48.803 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Inside Register Account Page
+21:33:48.803 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entering customer details....
+21:33:51.122 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Entered all the details
+21:33:51.124 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Starting password mismatch message verfication....
+21:33:54.216 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Message verfication failed
+21:33:54.218 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:34:04.668 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Could not load Home Page...
+21:34:04.668 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - **** Starting TC002_AccountRegistrationDiffPasswordTest execution ****
+21:34:14.713 [main] INFO  testCases.TC002_AccountRegistrationDiffPasswordTest - Could not load Home Page...
+21:34:18.256 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+21:34:18.267 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Home Page
+21:34:18.328 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked My Account
+21:34:18.600 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked Login Link
+21:34:18.603 [main] INFO  testCases.TC003_ValidUserLoginTest - Inside Login Page
+21:34:18.603 [main] INFO  testCases.TC003_ValidUserLoginTest - Entering user credentials
+21:34:19.196 [main] INFO  testCases.TC003_ValidUserLoginTest - Clicked on Continue button
+21:34:29.696 [main] INFO  testCases.TC003_ValidUserLoginTest - Invalid Credentials.
+21:34:29.697 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+21:34:39.738 [main] INFO  testCases.TC003_ValidUserLoginTest - Could not load Home Page...
+21:34:39.757 [main] INFO  testCases.TC003_ValidUserLoginTest - **** Starting TC003_ValidUserLoginTest execution ****
+21:34:49.779 [main] INFO  testCases.TC003_ValidUserLoginTest - Could not load Home Page...
+21:34:53.637 [main] INFO  testCases.TC005_SearchUserProduct - **** Starting TC005_SearchUserProduct Execution ****
+21:34:53.648 [main] INFO  testCases.TC005_SearchUserProduct - Inside the Home Page
+21:34:54.204 [main] INFO  testCases.TC005_SearchUserProduct - **** Validation Begins ****
+21:34:54.357 [main] INFO  testCases.TC005_SearchUserProduct - Product added to cart.
+21:34:54.559 [main] INFO  testCases.TC005_SearchUserProduct - Validation successfull !
+21:34:54.560 [main] INFO  testCases.TC005_SearchUserProduct - **** Finished TC005_SearchUserProduct Execution ****
+21:38:36.351 [main] INFO  testCases.TC001_AccountRegistrationTest - **** Started TC001_AccountRegistrationTest execution ****
+21:38:36.373 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside the Home Page...
+21:38:36.455 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on My Account
+21:38:37.274 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Register Link
+21:38:37.287 [main] INFO  testCases.TC001_AccountRegistrationTest - Inside Register Account Page...
+21:38:37.287 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering all the Customer details...
+21:38:39.400 [main] INFO  testCases.TC001_AccountRegistrationTest - Successfully entered all the details of the Customer...
+21:38:40.160 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicked on Continue button
+21:38:40.161 [main] INFO  testCases.TC001_AccountRegistrationTest - About to start validation message
+21:38:43.239 [main] INFO  testCases.TC001_AccountRegistrationTest - Validation Passed

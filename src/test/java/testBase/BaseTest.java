@@ -29,6 +29,10 @@ public class BaseTest {
 		logger = LogManager.getLogger(this.getClass()); /// this.getClass() -> will dynamically capture the current
 		// class(test case) we are running.
 		
+		if (System.getProperty("browser") != null) {
+			browser = System.getProperty("browser");
+		}
+		
 		if (browser.toLowerCase().contains("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.toLowerCase().contains("edge")) {
