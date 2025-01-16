@@ -39,11 +39,23 @@ public class BaseTest {
 		}
 		
 		if (browser.toLowerCase().contains("chrome")) {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			if (browser.toLowerCase().contains("headless")) {
+				options.addArguments("--headless=new");
+			}
+			driver = new ChromeDriver(options);
 		} else if (browser.toLowerCase().contains("edge")) {
-			driver = new EdgeDriver();
+			EdgeOptions options = new EdgeOptions();
+			if (browser.toLowerCase().contains("headless")) {
+				options.addArguments("--headless=new");
+			}
+			driver = new EdgeDriver(options);
 		} else if (browser.toLowerCase().contains("firefox")) {
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			if (browser.toLowerCase().contains("headless")) {
+				options.addArguments("--headless=new");
+			}
+			driver = new FirefoxDriver(options);
 		} else {
 			return;
 		}
