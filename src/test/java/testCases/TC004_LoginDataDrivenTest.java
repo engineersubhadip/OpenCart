@@ -1,7 +1,7 @@
 package testCases;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import pageObjects.AccountLogoutPage;
@@ -14,13 +14,13 @@ import utilities.DataProviders;
 public class TC004_LoginDataDrivenTest extends BaseTest {
 
 	@Test(dataProvider = "loginDataProvider", dataProviderClass = DataProviders.class)
-	public void validate_login(String email, String password, String expResult) {
+	public void validate_login(String email, String password, String expResult) throws InterruptedException {
 
 		logger.info("**** Starting TC004_LoginDataDrivenTest execution ****");
 
 		try {
-			HomePage homePage = new HomePage(driver);
-			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
+			HomePage homePage = new HomePage(tLocalDriver.get());
+			boolean homePageStatus = homePage.checkPageStatus(tLocalProperties.get().getProperty("homePageTitle"));
 
 			if (!homePageStatus) {
 				logger.info("Could not home Page.");
@@ -34,8 +34,8 @@ public class TC004_LoginDataDrivenTest extends BaseTest {
 			homePage.clickLogin();
 			logger.info("Clicked Login Link from Home Page");
 
-			LoginPage loginPage = new LoginPage(driver);
-			boolean loginPageStatus = loginPage.checkPageStatus(properties.getProperty("loginPageTitle"));
+			LoginPage loginPage = new LoginPage(tLocalDriver.get());
+			boolean loginPageStatus = loginPage.checkPageStatus(tLocalProperties.get().getProperty("loginPageTitle"));
 
 			if (!loginPageStatus) {
 				logger.info("Could not load Login Page.");
@@ -51,13 +51,13 @@ public class TC004_LoginDataDrivenTest extends BaseTest {
 			logger.info("Validation begins...");
 
 			if (expResult.equalsIgnoreCase("Valid")) { // valid data
-				MyAccountPage myAccount = new MyAccountPage(driver);
-				boolean myAccountPageStatus = myAccount.checkPageStatus(properties.getProperty("myAccountPageTitle"));
+				MyAccountPage myAccount = new MyAccountPage(tLocalDriver.get());
+				boolean myAccountPageStatus = myAccount.checkPageStatus(tLocalProperties.get().getProperty("myAccountPageTitle"));
 
 				if (myAccountPageStatus) { // valid data -> successful login -> Test pass
 					logger.info("This combination is valid and we are successfully logged in. Test case Pass " + email);
 					myAccount.clickLogout();
-					AccountLogoutPage logout = new AccountLogoutPage(driver);
+					AccountLogoutPage logout = new AccountLogoutPage(tLocalDriver.get());
 					logger.info("Inside Account Logout page");
 					logout.clickContinueButton();
 					Assert.assertTrue(true);
@@ -67,18 +67,17 @@ public class TC004_LoginDataDrivenTest extends BaseTest {
 					Assert.assertTrue(false);
 				}
 			} else { // Invalid data
-				MyAccountPage myAccount = new MyAccountPage(driver);
-				boolean myAccountPageStatus = myAccount.checkPageStatus(properties.getProperty("myAccountPageTitle"));
+				MyAccountPage myAccount = new MyAccountPage(tLocalDriver.get());
+				boolean myAccountPageStatus = myAccount.checkPageStatus(tLocalProperties.get().getProperty("myAccountPageTitle"));
 
 				if (! myAccountPageStatus) { // invalid data -> unsuccessful login -> Test Pass
 					logger.info("This combination is invalid and we are not logged in. Test case Pass " + email);
 					Assert.assertTrue(true);
 				} else { // invalid data -> successful login -> Test fail
+					
 					logger.info("This combination is invalid but we are logged in. Test case failed " + email);
 					myAccount.clickLogout();
-					AccountLogoutPage logout = new AccountLogoutPage(driver);
 					logger.info("Inside Account Logout page");
-					logout.clickContinueButton();
 					Assert.assertTrue(false);
 				}
 			}
@@ -89,5 +88,10 @@ public class TC004_LoginDataDrivenTest extends BaseTest {
 		}
 
 		logger.info("**** Finished TC004_LoginDataDrivenTest execution ****");
+	}
+
+	@AfterMethod
+	public void resetTest () throws InterruptedException {
+		tLocalDriver.get().navigate().to(tLocalProperties.get().getProperty("browserURL"));
 	}
 }
