@@ -17,6 +17,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -26,7 +28,7 @@ public class BaseTest {
 	public static WebDriver driver;
 	public Logger logger;
 	public Properties properties;
-	public ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
+	public static ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
 	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
 	
 	@BeforeClass(groups = { "sanity", "regression", "master" })
@@ -77,15 +79,9 @@ public class BaseTest {
 		tLocalProperties.remove();
 	}
 
-//	The below @BeforeMethod is dedicated to 1. Data Driven Testing 2. Retry Mechanism :- (Due to intermittent issues if the test case fails, again re-run the test from this Home Page
-//	@BeforeMethod(groups = { "sanity", "regression", "master" })
-//	public void reNavigate() {
-//		driver.navigate().to(properties.getProperty("browserURL"));
-//	}
-
-	public static String captureScreenshot() throws IOException {
-
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	public static String captureScreenshot() throws IOException, InterruptedException {
+		
+		File src = ((TakesScreenshot) tLocalDriver.get()).getScreenshotAs(OutputType.FILE);
 
 //		1. Create screenshot file Name
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
@@ -128,5 +124,6 @@ public class BaseTest {
 		String result = getRandomString() + getRandomNumberString();
 		return result;
 	}
+	
 
 }
