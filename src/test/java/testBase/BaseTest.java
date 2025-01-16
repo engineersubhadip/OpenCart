@@ -51,8 +51,8 @@ public class BaseTest {
 		tLocalDriver.set(driver);
 
 		tLocalDriver.get().manage().deleteAllCookies();
-		tLocalDriver.get().manage().window().setSize(new Dimension(1440,900));
-		tLocalDriver.get().manage().window().maximize();
+		tLocalDriver.get().manage().window().setSize(new Dimension(1440,900)); // full-screen
+		tLocalDriver.get().manage().window().maximize(); // maximized (Combo of full-screen and maximized view give the best possible result)
 		tLocalDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //		Loading Config.properties file :-
