@@ -21,7 +21,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import testBase.BaseTest;
 
 public class ExtentReportManager implements ITestListener {
-	
+
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
@@ -29,15 +29,15 @@ public class ExtentReportManager implements ITestListener {
 
 	public static boolean reportStructureGenerated = false;
 	public Lock lock = new ReentrantLock();
-	
+
 	public static boolean browserUpdate = false;
 
 	public List<String> browserName = new ArrayList<>();
 
 	public void onStart(ITestContext context) {
-		
+
 		lock.lock();
-		
+
 		if (reportStructureGenerated == false) {
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 			Date dt = new Date();
@@ -58,7 +58,7 @@ public class ExtentReportManager implements ITestListener {
 			extent.setSystemInfo("Tester Name", System.getProperty("user.name"));
 			extent.setSystemInfo("Environment", "QA");
 			extent.setSystemInfo("OS", context.getCurrentXmlTest().getParameter("operatingSystem"));
-			
+
 			List<String> groupName = context.getCurrentXmlTest().getIncludedGroups();
 			if (groupName.isEmpty() == false) {
 				extent.setSystemInfo("Groups", groupName.toString());
@@ -96,7 +96,9 @@ public class ExtentReportManager implements ITestListener {
 			tLocalExtentTest.get().addScreenCaptureFromPath(screenShotPath);
 		} catch (IOException e) {
 			e.printStackTrace();
-		} 
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -119,8 +121,8 @@ public class ExtentReportManager implements ITestListener {
 		extent.flush();
 		lock.unlock();
 	}
-	
-	public void removeTest () {
+
+	public void removeTest() {
 		tLocalExtentTest.remove();
 	}
 }
