@@ -1,5 +1,6 @@
 package utilities;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -8,6 +9,9 @@ import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -28,7 +32,7 @@ public class ExtentReportManager implements ITestListener {
 	public ThreadLocal<ExtentTest> tLocalExtentTest = new ThreadLocal<>();
 
 	public static boolean reportStructureGenerated = false;
-	public Lock lock = new ReentrantLock();
+	public static Lock lock = new ReentrantLock();
 
 	public static boolean browserUpdate = false;
 
@@ -82,17 +86,13 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-//		1. Create an entry corresponding to the current @Test Method/Class
 		test = extent.createTest(result.getTestClass().getName());
 		tLocalExtentTest.set(test);
-//		2. Assign category to the particular entry
 		tLocalExtentTest.get().assignCategory(result.getMethod().getGroups());
-//		3. Update status of the entry
 		tLocalExtentTest.get().log(Status.FAIL, result.getMethod().getMethodName());
 		tLocalExtentTest.get().log(Status.INFO, result.getThrowable());
-//		4. Attach screenshot to the corresponding entry
 		try {
-			String screenShotPath = BaseTest.captureScreenshot();
+			String screenShotPath = captureScreenshot();
 			tLocalExtentTest.get().addScreenCaptureFromPath(screenShotPath);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -120,6 +120,26 @@ public class ExtentReportManager implements ITestListener {
 		}
 		extent.flush();
 		lock.unlock();
+	}
+	
+	private static String captureScreenshot() throws IOException, InterruptedException {
+		
+		File src = ((TakesScreenshot) BaseTest.tLocalDriver.get()).getScreenshotAs(OutputType.FILE);
+		
+		lock.lock();
+//		1. Create screenshot file Name
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+		Date dt = new Date();
+		String fileName = df.format(dt);
+
+//		2. Set the target File Path
+		String targetFilePath = System.getProperty("user.dir") + "/screenshots/screenshot_" + fileName + ".png";
+
+		FileUtils.copyFile(src, new File(targetFilePath));
+		
+		lock.unlock();
+		
+		return targetFilePath;
 	}
 
 	public void removeTest() {
