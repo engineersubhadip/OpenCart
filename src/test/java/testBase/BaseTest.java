@@ -4,12 +4,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger; //Log4j
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -46,6 +51,7 @@ public class BaseTest {
 		tLocalDriver.set(driver);
 
 		tLocalDriver.get().manage().deleteAllCookies();
+		tLocalDriver.get().manage().window().setSize(new Dimension(1440,900));
 		tLocalDriver.get().manage().window().maximize();
 		tLocalDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
