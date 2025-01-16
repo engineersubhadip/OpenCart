@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="MasterSuite">
+
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="utilities.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Data Driven Test">
+
+		<parameter name="browser" value="edge" />
+		<parameter name="operatingSystem" value="windows" />
+
+		<classes>
+			<class name="testCases.TC004_LoginDataDrivenTest" />
+		</classes>
+
+	</test>
+
+</suite>

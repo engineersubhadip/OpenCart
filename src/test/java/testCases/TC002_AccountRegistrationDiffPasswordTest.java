@@ -68,7 +68,7 @@ public class TC002_AccountRegistrationDiffPasswordTest extends BaseTest {
 		
 		String passwordMismatchMessage = regPage.validateIncorrectPasswordMessage();
 		
-		if (passwordMismatchMessage.equals("Password confirmation does not match password!")) {
+		if (passwordMismatchMessage.equals("Password confirmation does not match password")) {
 			logger.info("Message verfication successfull");
 			Assert.assertTrue(true);
 		}else {

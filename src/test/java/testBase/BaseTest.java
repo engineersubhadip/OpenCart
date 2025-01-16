@@ -1,24 +1,15 @@
 package testBase;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 import java.util.Properties;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger; //Log4j
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -33,12 +24,10 @@ public class BaseTest {
 	
 	@BeforeClass(groups = { "sanity", "regression", "master" })
 	@Parameters({ "browser", "operatingSystem" })
-
 	public void setUp(String browser, String operatingSystem) throws IOException {
 
 		logger = LogManager.getLogger(this.getClass()); /// this.getClass() -> will dynamically capture the current
 		// class(test case) we are running.
-		// line 21 will load the log4j2.xml file
 		
 		if (browser.toLowerCase().contains("chrome")) {
 			driver = new ChromeDriver();
@@ -67,7 +56,6 @@ public class BaseTest {
 		tLocalProperties.set(properties);
 		
 		String browserURL = tLocalProperties.get().getProperty("browserURL"); // reading value from properties file
-//		String browserURL = "https://tutorialsninja.com/demo/";
 		
 		tLocalDriver.get().get(browserURL);
 	}
@@ -77,23 +65,6 @@ public class BaseTest {
 		tLocalDriver.get().quit();
 		tLocalDriver.remove();
 		tLocalProperties.remove();
-	}
-
-	public static String captureScreenshot() throws IOException, InterruptedException {
-		
-		File src = ((TakesScreenshot) tLocalDriver.get()).getScreenshotAs(OutputType.FILE);
-
-//		1. Create screenshot file Name
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
-		Date dt = new Date();
-		String fileName = df.format(dt);
-
-//		2. Set the target File Path
-		String targetFilePath = System.getProperty("user.dir") + "/screenshots/screenshot_" + fileName + ".png";
-
-		FileUtils.copyFile(src, new File(targetFilePath));
-
-		return targetFilePath;
 	}
 
 	public static String getRandomString() {

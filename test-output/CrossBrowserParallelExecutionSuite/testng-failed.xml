@@ -4,10 +4,30 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
+  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="operatingSystem" value="windows"/>
+    <classes>
+      <class name="testCases.TC001_AccountRegistrationTest">
+        <methods>
+          <include name="verfiy_account_registration"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC001_AccountRegistrationTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
   <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
     <parameter name="browser" value="edge"/>
     <parameter name="operatingSystem" value="windows"/>
     <classes>
+      <class name="testCases.TC002_AccountRegistrationDiffPasswordTest">
+        <methods>
+          <include name="validate_incorrect_password_message"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC002_AccountRegistrationDiffPasswordTest -->
       <class name="testCases.TC003_ValidUserLoginTest">
         <methods>
           <include name="validate_valid_user_credentials"/>
