@@ -5,7 +5,7 @@
 
 	<groups>
 		<run>
-			<include name="sanity" />
+			<include name="regression" />
 			<!--<exclude name="regression"/>-->
 			<!--Both include Sanity and Exclude Regression will not work together. Because if we are
 			excluding Regression, we are also excluding @BeforeClass. Therefore it would lead to setUp initialization error-->
