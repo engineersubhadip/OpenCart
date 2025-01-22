@@ -9,17 +9,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger; //Log4j
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 import threadSafe.DriverManagement;
+import threadSafe.PropertyManagement;
 
 public class BaseTest {
 
@@ -27,8 +22,9 @@ public class BaseTest {
 	public Logger logger;
 	public Properties properties;
 //	public static ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
-	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
+//	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
 	private DriverManagement driverManager;
+	private PropertyManagement propManager;
 	
 	@BeforeClass(groups = { "sanity", "regression", "master" })
 	@Parameters({ "browser", "operatingSystem" })
@@ -65,10 +61,8 @@ public class BaseTest {
 		*/
 		driverManager = DriverManagement.getInstance();
 		driverManager.setDriver(browser);
-		driver = driverManager.getDriver();
 		
-//		tLocalDriver.set(driver);
-
+		driver = driverManager.getDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().setSize(new Dimension(1440,900)); // full-screen
 		driver.manage().window().maximize(); // maximized (Combo of full-screen and maximized view give the best possible result)
@@ -76,16 +70,12 @@ public class BaseTest {
 
 //		Loading Config.properties file :-
 		
-
-		properties = new Properties();
-		FileInputStream file = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
-
-		properties.load(file);
-		tLocalProperties.set(properties);
+		propManager = PropertyManagement.getInstance();
+		String propFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties";
+		propManager.setProperty(propFilePath);
 		
-		String browserURL = tLocalProperties.get().getProperty("browserURL"); // reading value from properties file
-		
+		properties = propManager.getProperty();
+		String browserURL = properties.getProperty("browserURL"); // reading value from properties file
 		driver.get(browserURL);
 	}
 
