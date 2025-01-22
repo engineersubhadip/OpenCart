@@ -17,8 +17,8 @@ public class TC003_ValidUserLoginTest extends BaseTest {
 		logger.info("**** Starting TC003_ValidUserLoginTest execution ****");
 
 		try {
-			HomePage homePage = new HomePage(tLocalDriver.get());
-			boolean homePageStatus = homePage.checkPageStatus(tLocalProperties.get().getProperty("homePageTitle"));
+			HomePage homePage = new HomePage(driver);
+			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
 
 			if (!homePageStatus) {
 				logger.info("Could not load Home Page...");
@@ -31,8 +31,8 @@ public class TC003_ValidUserLoginTest extends BaseTest {
 			homePage.clickLogin();
 			logger.info("Clicked Login Link");
 
-			LoginPage loginPage = new LoginPage(tLocalDriver.get());
-			boolean loginPageStatus = loginPage.checkPageStatus(tLocalProperties.get().getProperty("loginPageTitle"));
+			LoginPage loginPage = new LoginPage(driver);
+			boolean loginPageStatus = loginPage.checkPageStatus(properties.getProperty("loginPageTitle"));
 
 			if (!loginPageStatus) {
 				logger.info("Could not load Login Page ....");
@@ -41,15 +41,15 @@ public class TC003_ValidUserLoginTest extends BaseTest {
 
 			logger.info("Inside Login Page");
 			logger.info("Entering user credentials");
-			loginPage.enterUserEmail(tLocalProperties.get().getProperty("email"));
-			loginPage.enterUserPassword(tLocalProperties.get().getProperty("password"));
+			loginPage.enterUserEmail(properties.getProperty("email"));
+			loginPage.enterUserPassword(properties.getProperty("password"));
 			loginPage.clickLoginButton();
 
 			logger.info("Clicked on Continue button");
 
-			MyAccountPage myAccount = new MyAccountPage(tLocalDriver.get());
+			MyAccountPage myAccount = new MyAccountPage(driver);
 			boolean myAccountStatus = myAccount
-					.checkPageStatus(tLocalProperties.get().getProperty("myAccountPageTitle"));
+					.checkPageStatus(properties.getProperty("myAccountPageTitle"));
 
 			if (!myAccountStatus) {
 				logger.info("Invalid Credentials.");
@@ -60,7 +60,7 @@ public class TC003_ValidUserLoginTest extends BaseTest {
 
 			myAccount.clickLogout();
 
-			AccountLogoutPage logoutPage = new AccountLogoutPage(tLocalDriver.get());
+			AccountLogoutPage logoutPage = new AccountLogoutPage(driver);
 			logoutPage.clickContinueButton();
 
 			Assert.assertTrue(true);

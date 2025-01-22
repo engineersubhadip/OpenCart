@@ -17,8 +17,8 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 
 		try {
 
-			HomePage homePage = new HomePage(tLocalDriver.get());
-			boolean homePageStatus = homePage.checkPageStatus(tLocalProperties.get().getProperty("homePageTitle"));
+			HomePage homePage = new HomePage(driver);
+			boolean homePageStatus = homePage.checkPageStatus(properties.getProperty("homePageTitle"));
 			
 			if (!homePageStatus) {
 				logger.info("Could not load Home Page...");
@@ -32,8 +32,8 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 			homePage.clickRegister(); 
 			logger.info("Clicked on Register Link");
 
-			AccountRegistrationPage regPage = new AccountRegistrationPage(tLocalDriver.get());
-			boolean registrationPageStatus = regPage.checkPageStatus(tLocalProperties.get().getProperty("accountRegisterPageTitle"));
+			AccountRegistrationPage regPage = new AccountRegistrationPage(driver);
+			boolean registrationPageStatus = regPage.checkPageStatus(properties.getProperty("accountRegisterPageTitle"));
 			
 			if (!registrationPageStatus) {
 				logger.info("Could not load Register Account Page...");
