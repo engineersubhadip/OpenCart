@@ -21,8 +21,6 @@ public class BaseTest {
 	public WebDriver driver;
 	public Logger logger;
 	public Properties properties;
-//	public static ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
-//	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
 	private DriverManagement driverManager;
 	private PropertyManagement propManager;
 	
@@ -36,29 +34,7 @@ public class BaseTest {
 		if (System.getProperty("browser") != null) {
 			browser = System.getProperty("browser");
 		}
-		/*
-		if (browser.toLowerCase().contains("chrome")) {
-			ChromeOptions options = new ChromeOptions();
-			if (browser.toLowerCase().contains("headless")) {
-				options.addArguments("--headless=new");
-			}
-			driver = new ChromeDriver(options);
-		} else if (browser.toLowerCase().contains("edge")) {
-			EdgeOptions options = new EdgeOptions();
-			if (browser.toLowerCase().contains("headless")) {
-				options.addArguments("--headless=new");
-			}
-			driver = new EdgeDriver(options);
-		} else if (browser.toLowerCase().contains("firefox")) {
-			FirefoxOptions options = new FirefoxOptions();
-			if (browser.toLowerCase().contains("headless")) {
-				options.addArguments("--headless=new");
-			}
-			driver = new FirefoxDriver(options);
-		} else {
-			return;
-		}
-		*/
+		
 		driverManager = DriverManagement.getInstance();
 		driverManager.setDriver(browser);
 		
@@ -75,18 +51,14 @@ public class BaseTest {
 		propManager.setProperty(propFilePath);
 		
 		properties = propManager.getProperty();
-		String browserURL = properties.getProperty("browserURL"); // reading value from properties file
+		String browserURL = properties.getProperty("browserURL");
 		driver.get(browserURL);
 	}
 
 	@AfterClass(groups = { "sanity", "regression", "master" })
 	public void tearDown() {
-		/*
-		tLocalDriver.get().quit();
-		tLocalDriver.remove();
-		tLocalProperties.remove();
-		*/
 		driverManager.quitBrowser();
+		propManager.removeProperty();
 	}
 
 	public static String getRandomString() {
