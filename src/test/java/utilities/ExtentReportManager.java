@@ -23,6 +23,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import testBase.BaseTest;
+import threadSafe.DriverManagement;
 
 public class ExtentReportManager implements ITestListener {
 
@@ -31,8 +32,8 @@ public class ExtentReportManager implements ITestListener {
 	public ExtentTest test;
 	public ThreadLocal<ExtentTest> tLocalExtentTest = new ThreadLocal<>();
 
-	public static boolean reportStructureGenerated = false;
-	public static Lock lock = new ReentrantLock();
+	private static boolean reportStructureGenerated = false;
+	private static Lock lock = new ReentrantLock();
 
 	public static boolean browserUpdate = false;
 
@@ -40,54 +41,54 @@ public class ExtentReportManager implements ITestListener {
 
 	public void onStart(ITestContext context) {
 
-		lock.lock();
-
 		if (reportStructureGenerated == false) {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
-			Date dt = new Date();
-			String fileName = df.format(dt);
+			lock.lock();
+			if (reportStructureGenerated == false) {
+				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+				Date dt = new Date();
+				String fileName = df.format(dt);
 
-			sparkReporter = new ExtentSparkReporter(
-					System.getProperty("user.dir") + "/reports/file_" + fileName + ".html");
+				sparkReporter = new ExtentSparkReporter(
+						System.getProperty("user.dir") + "/reports/file_" + fileName + ".html");
 
-			sparkReporter.config().setDocumentTitle("Automation report");
-			sparkReporter.config().setReportName("Open Cart Report");
-			sparkReporter.config().setTheme(Theme.DARK);
+				sparkReporter.config().setDocumentTitle("Automation report");
+				sparkReporter.config().setReportName("Open Cart Report");
+				sparkReporter.config().setTheme(Theme.DARK);
 
-			extent = new ExtentReports();
+				extent = new ExtentReports();
 
-			extent.attachReporter(sparkReporter); // configure the UI in the report
+				extent.attachReporter(sparkReporter); // configure the UI in the report
 
-			extent.setSystemInfo("Application", "Open Cart");
-			extent.setSystemInfo("Tester Name", System.getProperty("user.name"));
-			extent.setSystemInfo("Environment", "QA");
-			extent.setSystemInfo("OS", context.getCurrentXmlTest().getParameter("operatingSystem"));
+				extent.setSystemInfo("Application", "Open Cart");
+				extent.setSystemInfo("Tester Name", System.getProperty("user.name"));
+				extent.setSystemInfo("Environment", "QA");
+				extent.setSystemInfo("OS", context.getCurrentXmlTest().getParameter("operatingSystem"));
 
-			List<String> groupName = context.getCurrentXmlTest().getIncludedGroups();
-			if (groupName.isEmpty() == false) {
-				extent.setSystemInfo("Groups", groupName.toString());
+				List<String> groupName = context.getCurrentXmlTest().getIncludedGroups();
+				if (groupName.isEmpty() == false) {
+					extent.setSystemInfo("Groups", groupName.toString());
+				}
+				reportStructureGenerated = true;
 			}
-			reportStructureGenerated = true;
+			lock.unlock();			
 		}
-		lock.unlock();
 
 		browserName.add(context.getCurrentXmlTest().getParameter("browser"));
 	}
-
-	public void onTestSuccess(ITestResult result) {
-//		1. Create an entry in the report corresponding to the particular @Test method/class.
+	
+	public void onTestStart (ITestResult result) {
 		test = extent.createTest(result.getTestClass().getName());
 		tLocalExtentTest.set(test);
-//		2. Assign group to the particular entry
+	}
+	public void onTestSuccess(ITestResult result) {
+//		1. Assign group to the particular entry
 		tLocalExtentTest.get().assignCategory(result.getMethod().getGroups());
-//		3. Update the status in the report
+//		2. Update the status in the report
 		tLocalExtentTest.get().log(Status.PASS, result.getMethod().getMethodName());
 		tLocalExtentTest.get().log(Status.INFO, result.getMethod().getMethodName());
 	}
 
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
-		tLocalExtentTest.set(test);
 		tLocalExtentTest.get().assignCategory(result.getMethod().getGroups());
 		tLocalExtentTest.get().log(Status.FAIL, result.getMethod().getMethodName());
 		tLocalExtentTest.get().log(Status.INFO, result.getThrowable());
@@ -102,9 +103,6 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-//		1. Create an entry in the report corresponding to the particular @Test method/ Class
-		test = extent.createTest(result.getTestClass().getName());
-		tLocalExtentTest.set(test);
 //		2. Assign group to the particular entry
 		tLocalExtentTest.get().assignCategory(result.getMethod().getGroups());
 //		3. Update the status
@@ -113,21 +111,26 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	public void onFinish(ITestContext context) {
-		lock.lock();
+		
 		if (browserUpdate == false) {
-			extent.setSystemInfo("Browser", browserName.toString());
-			browserUpdate = true;
+			lock.lock();
+			if (browserUpdate == false) {
+				extent.setSystemInfo("Browser", browserName.toString());
+				browserUpdate = true;				
+			}
+			lock.unlock();
 		}
+		
 		extent.flush();
-		lock.unlock();
+		if (tLocalExtentTest.get() != null) {
+			tLocalExtentTest.remove();
+		}
 	}
 	
 	private static String captureScreenshot() throws IOException, InterruptedException {
 		
-		File src = ((TakesScreenshot) BaseTest.tLocalDriver.get()).getScreenshotAs(OutputType.FILE);
+		File src = ((TakesScreenshot) DriverManagement.getInstance().getDriver()).getScreenshotAs(OutputType.FILE);
 		
-		lock.lock();
-//		1. Create screenshot file Name
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 		Date dt = new Date();
 		String fileName = df.format(dt);
@@ -137,12 +140,7 @@ public class ExtentReportManager implements ITestListener {
 
 		FileUtils.copyFile(src, new File(targetFilePath));
 		
-		lock.unlock();
-		
 		return targetFilePath;
 	}
 
-	public void removeTest() {
-		tLocalExtentTest.remove();
-	}
 }
