@@ -19,13 +19,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import threadSafe.DriverManagement;
+
 public class BaseTest {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 	public Logger logger;
 	public Properties properties;
-	public static ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
+//	public static ThreadLocal<WebDriver> tLocalDriver = new ThreadLocal<>();
 	public ThreadLocal<Properties> tLocalProperties = new ThreadLocal<>();
+	private DriverManagement driverManager;
 	
 	@BeforeClass(groups = { "sanity", "regression", "master" })
 	@Parameters({ "browser", "operatingSystem" })
@@ -37,7 +40,7 @@ public class BaseTest {
 		if (System.getProperty("browser") != null) {
 			browser = System.getProperty("browser");
 		}
-		
+		/*
 		if (browser.toLowerCase().contains("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			if (browser.toLowerCase().contains("headless")) {
@@ -59,13 +62,17 @@ public class BaseTest {
 		} else {
 			return;
 		}
+		*/
+		driverManager = DriverManagement.getInstance();
+		driverManager.setDriver(browser);
+		driver = driverManager.getDriver();
+		
+//		tLocalDriver.set(driver);
 
-		tLocalDriver.set(driver);
-
-		tLocalDriver.get().manage().deleteAllCookies();
-		tLocalDriver.get().manage().window().setSize(new Dimension(1440,900)); // full-screen
-		tLocalDriver.get().manage().window().maximize(); // maximized (Combo of full-screen and maximized view give the best possible result)
-		tLocalDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().deleteAllCookies();
+		driver.manage().window().setSize(new Dimension(1440,900)); // full-screen
+		driver.manage().window().maximize(); // maximized (Combo of full-screen and maximized view give the best possible result)
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //		Loading Config.properties file :-
 		
@@ -79,14 +86,17 @@ public class BaseTest {
 		
 		String browserURL = tLocalProperties.get().getProperty("browserURL"); // reading value from properties file
 		
-		tLocalDriver.get().get(browserURL);
+		driver.get(browserURL);
 	}
 
 	@AfterClass(groups = { "sanity", "regression", "master" })
 	public void tearDown() {
+		/*
 		tLocalDriver.get().quit();
 		tLocalDriver.remove();
 		tLocalProperties.remove();
+		*/
+		driverManager.quitBrowser();
 	}
 
 	public static String getRandomString() {
